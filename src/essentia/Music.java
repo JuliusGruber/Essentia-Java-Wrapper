@@ -10,8 +10,7 @@ import java.util.Collection;
 
 import org.apache.commons.io.FileUtils;
 
-public class ShortSounds {
-
+public class Music {
 public static void main(String[] args) {
 		
 		
@@ -30,15 +29,17 @@ public static void main(String[] args) {
 		
 
 	}
-	
+
+
+
 	protected static void extractFeatures(String folderPath, String []args ){
-		String exePath = "C:/Users/Julius/Desktop/essentia-extractors-v2.1_beta2/streaming_extractor_short_sounds.exe";
-//		String profilePath = "C:/Users/Julius/Dropbox/eclipseWorkspace/essentia/yamlProfiles/music.yaml";
+		String exePath = "C:/Users/Julius/Desktop/essentia-extractors-v2.1_beta2/streaming_extractor_music.exe";
+		String profilePath = "C:/Users/Julius/Dropbox/eclipseWorkspace/essentia/yamlProfiles/music.yaml";
 	
 
 		
 //		create directory for the yaml files
-		String outputFolderPath = folderPath +"/YAMLessentiaShortSounds/";
+		String outputFolderPath = folderPath +"/YAMLessentiaMusic/";
 		File folder = new File(outputFolderPath);
 		folder.mkdirs();
 		
@@ -66,7 +67,7 @@ public static void main(String[] args) {
 			
 			Process process =  null;		
 			try {
-				 process= new ProcessBuilder(exePath,filePath, outputFilePath ).start();
+				 process= new ProcessBuilder(exePath,filePath, outputFilePath, profilePath ).start();
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -90,18 +91,16 @@ public static void main(String[] args) {
 		}
 	}
 
-	
-	
 	protected static void getExeResponse(String [] args){
-		String exePath = "C:/Users/Julius/Desktop/essentia-extractors-v2.1_beta2/streaming_extractor_short_sounds.exe";
+		String exePath = "C:/Users/Julius/Desktop/essentia-extractors-v2.1_beta2/streaming_extractor_music.exe";
 		String inputAudioFilePath = "C:/Users/Julius/Desktop/SampleDatenbanken/15Samples/LudFlamA-01.wav";
 		String outputTxtFilePath = "C:/Users/Julius/Desktop/SampleDatenbanken/15Samples/LudFlamA-01.yaml";
-//		String profilePath = "C:/Users/Julius/Dropbox/eclipseWorkspace/essentia/yamlProfiles/music.yaml";
+		String profilePath = "C:/Users/Julius/Dropbox/eclipseWorkspace/essentia/yamlProfiles/music.yaml";
 		
 		
 		Process process =  null;		
 		try {
-			 process= new ProcessBuilder(exePath, inputAudioFilePath, outputTxtFilePath ).start();
+			 process= new ProcessBuilder(exePath, inputAudioFilePath, outputTxtFilePath,profilePath  ).start();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -132,5 +131,5 @@ public static void main(String[] args) {
 		return files;
 	}
 	
-	
+
 }

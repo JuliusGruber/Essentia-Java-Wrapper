@@ -1,0 +1,33 @@
+outputFrames: 0
+outputFormat: yaml
+requireMbid: false
+indent: 4
+analysisSampleRate: 44100.0
+
+lowlevel:
+    frameSize: 2048
+    hopSize: 1024
+    zeroPadding: 0
+    windowType: blackmanharris62
+    silentFrames: noise
+    stats: ["mean", "var"]
+
+average_loudness:
+    frameSize: 88200
+    hopSize: 44100
+    windowType: hann
+    silentFrames: noise
+
+rhythm:
+    method: degara
+    minTempo: 40
+    maxTempo: 208
+    stats: ["mean", "var", "median", "min", "max", "dmean", "dmean2", "dvar", "dvar2"]
+
+tonal:
+    frameSize: 4096
+    hopSize: 2048
+    zeroPadding: 0
+    windowType: blackmanharris62
+    silentFrames: noise
+    stats: ["mean", "var", "median", "min", "max", "dmean", "dmean2", "dvar", "dvar2"]
