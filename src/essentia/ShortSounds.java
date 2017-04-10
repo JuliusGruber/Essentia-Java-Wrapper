@@ -18,7 +18,8 @@ public static void main(String[] args) {
 //		String folderPath = "C:/Users/Julius/Desktop/SampleDatenbanken/15Samples";
 //		String folderPath = "C:/Users/Julius/Desktop/SampleDatenbanken/33DrumSamples";
 //		String folderPath = "C:/Users/Julius/Desktop/SampleDatenbanken/TSD Acidized Wav Files/TSD - Reggae Snares - 100";
-		String folderPath = "C:/Users/Julius/Desktop/SampleDatenbanken/snareGroups";
+//		String folderPath = "C:/Users/Julius/Desktop/SampleDatenbanken/snareGroups";
+		String folderPath = "C:/Users/Julius/Desktop/SampleDatenbanken/synth-groups";
 		
 		
 //		getExeResponse(args);

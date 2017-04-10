@@ -10,7 +10,7 @@ lowlevel:
     zeroPadding: 0
     windowType: blackmanharris62
     silentFrames: noise
-    stats: ["mean", "var"]
+    stats: ["mean", "var", "median", "min", "max", "dmean", "dmean2", "dvar", "dvar2"]
 
 average_loudness:
     frameSize: 88200
